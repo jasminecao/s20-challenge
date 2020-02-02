@@ -1,9 +1,15 @@
-1. How many hours did you spend on this challenge?
+1. How many hours did you spend on this challenge? ~4 hours
 
-2. Describe the features you have implemented.
+2. Describe the features you have implemented. 
+  A quiz is built from the questions and options in "data". The question prompts are written in bold. Each option becomes a radio button, with a label that includes the letter and the corresponding option. Since radio buttons of the same question have the same name, only one option can be clicked for each question. The submit button only displays results when there is one answer to every question. When submit is clicked, the results are displayed such that the letter with the greatest proportion corresponds to the result displayed. After submit is clicked, all the radio buttons are disabled so the user can't change their answer. When retake is clicked, previous answers are cleared and the radio buttons are enabled again. I also added some styling to the radio buttons & their labels, as well as the submit/retake buttons. If I had more time, I would've loved to add a header/nav bar and other features.
 
 3. Describe the difficulties you faced (if any) while working on the challenge and how you tackled them.
+  The main difficulty was displaying the correct result. I needed to keep track of the number of times each letter was clicked, finding the max, and finding the index of the max letter. I ended up creating two arrays, a letterArray that indexed each letter, and an answerFreq array that incremented a letter's index by one everytime a letter was clicked. After submit was clicked, I found the maximum letter and its index, and passed that into data.results.
 
 4. How much time do you think you can spend each week working for theDP Web Department?
+  8-10 hours.
 
 5. (Optional) If there is anything you want to tell us, go ahead :)
+credits:
+CSS for radio buttons: https://www.w3schools.com/howto/howto_css_custom_checkbox.asp
+CSS for submit button: https://codepen.io/thelaazyguy/pen/mMVEmL
