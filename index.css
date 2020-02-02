@@ -1,6 +1,112 @@
-/* write your code below...  */
+h1 {
+  text-align: center;
+  font-weight: normal;
+  font-family: "Quattrocento Sans", sans-serif;
+}
+.button {
+  font-weight: 700;
+  color: #446cb3;
+}
 
 body {
   padding: 1em;
-  background-color: lightblue;
+  background: #AED6F1;
+}
+
+.question {
+  font-weight: bold;
+}
+
+.rad {
+  background-color: #fff;
+  display: block;
+  margin: 10px 0;
+  position: relative;
+}
+.rad label {
+  padding: 12px 40px;
+  width: 100%;
+  display: block;
+  text-align: left;
+  color: #3C454C;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  transition: color 200ms ease-in;
+  overflow: hidden;
+}
+
+.rad input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.check {
+  position: absolute;
+  top: 28%;
+  left: 5px;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.rad:hover input ~ .check {
+  background-color: #ccc;
+}
+
+.rad input:checked ~ .check {
+  background-color: #446cb3;
+}
+
+.check:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.rad input:checked ~ .check:after {
+  display: block;
+}
+
+.rad .check:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+
+button {
+  font-family: "Lato", sans-serif;
+
+  width: 170px;
+  height: 40px;
+  line-height: 1;
+  font-size: 18px;
+
+  letter-spacing: 1px;
+  border: 3px solid #446cb3;
+  background: #fff;
+  color: #446cb3;
+  border-radius: 40px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.35s;
+}
+
+button:hover {
+  background: #446cb3;
+  color: #fff;
+}
+
+button span {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.35s;
 }
